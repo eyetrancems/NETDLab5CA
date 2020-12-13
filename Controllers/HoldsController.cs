@@ -14,9 +14,9 @@ namespace NETDLab5CA.Controllers
 {
     public class HoldsController : Controller
     {
-        private readonly LibraryContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public HoldsController(LibraryContext context)
+        public HoldsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -24,8 +24,8 @@ namespace NETDLab5CA.Controllers
         // GET: Holds
         public async Task<IActionResult> Index()
         {
-            var libraryContext = _context.Holds.Include(h => h.Book).Include(h => h.Client);
-            return View(await libraryContext.ToListAsync());
+            var applicationDbContext = _context.Holds.Include(h => h.Book).Include(h => h.Client);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Holds/Details/5

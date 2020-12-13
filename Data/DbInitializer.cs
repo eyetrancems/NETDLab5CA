@@ -9,7 +9,7 @@ namespace NETDLab5CA.Data
 {
     public class DbInitializer
     {
-        public static void Initialize(LibraryContext context)
+        public static void Initialize(ApplicationDbContext context)
         {
             context.Database.EnsureCreated();
 

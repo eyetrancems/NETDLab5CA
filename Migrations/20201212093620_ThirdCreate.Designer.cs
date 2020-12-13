@@ -8,7 +8,7 @@ using NETDLab5CA.Data;
 
 namespace NETDLab5CA.Migrations
 {
-    [DbContext(typeof(LibraryContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20201212093620_ThirdCreate")]
     partial class ThirdCreate
     {

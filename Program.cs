@@ -30,7 +30,7 @@ namespace NETDLab5CA
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<LibraryContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
@@ -50,7 +50,7 @@ namespace NETDLab5CA
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<LibraryContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

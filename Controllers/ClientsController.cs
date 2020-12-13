@@ -14,9 +14,9 @@ namespace NETDLab5CA.Controllers
 {
     public class ClientsController : Controller
     {
-        private readonly LibraryContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public ClientsController(LibraryContext context)
+        public ClientsController(ApplicationDbContext context)
         {
             _context = context;
         }

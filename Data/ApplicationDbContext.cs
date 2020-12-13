@@ -16,5 +16,17 @@ namespace NETDLab5CA.Data
         {
         }
 
+        // Add Book, Hold and Client model into table in database
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Hold> Holds { get; set; }
+        public DbSet<Client> Clients { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Book>().ToTable("Book");
+            modelBuilder.Entity<Hold>().ToTable("Hold");
+            modelBuilder.Entity<Client>().ToTable("Client");
+        }
     }
 }
